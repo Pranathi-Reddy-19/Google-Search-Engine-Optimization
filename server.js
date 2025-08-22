@@ -14,7 +14,8 @@ app.use(cors({ origin: "*" })); // Allow extension requests
 app.use(express.json());
 
 // ✅ MongoDB Connection
-mongoose.connect(process.env.MONGO_URI, {
+const MONGO_URI = "mongodb+srv://pranathi_research:pranathi19@cluster0.fp7x1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
